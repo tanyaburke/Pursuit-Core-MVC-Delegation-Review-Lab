@@ -63,6 +63,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="5qO-td-Jjo" id="351-5b-2cW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,13 +85,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-WU-JMo">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="10" maximumValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="8Yh-WU-JMo">
                                 <rect key="frame" x="160" y="390.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="Y0S-Bp-plP" eventType="valueChanged" id="hxr-7u-GFO"/>
+                                </connections>
                             </stepper>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KJu-qc-zgB">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="10" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="KJu-qc-zgB">
                                 <rect key="frame" x="38" y="320.5" width="338" height="31"/>
                                 <connections>
-                                    <action selector="sliderAction:" destination="Y0S-Bp-plP" eventType="valueChanged" id="1qY-7v-qph"/>
+                                    <action selector="sliderAction:" destination="Y0S-Bp-plP" eventType="valueChanged" id="0ZU-A7-Vsl"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dA6-Ur-gaV">
@@ -100,6 +106,9 @@
                                 <state key="normal" title="Preview Font Size:">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4Xr-40-IdB" kind="unwind" unwindAction="unWindFontSettingWithSegue:" id="2X0-qO-Zyd"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TDm-0l-h0K">
                                 <rect key="frame" x="318" y="534" width="34" height="35"/>
@@ -139,6 +148,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Q5-PO-1Hx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4Xr-40-IdB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1863.7681159420292" y="114.50892857142857"/>
         </scene>

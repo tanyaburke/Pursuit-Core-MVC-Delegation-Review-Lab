@@ -6,6 +6,7 @@ struct Movie {
     let locations: [String]
     let posterImageName: String
     let description: String
+
     
     static let allMovies: [Movie] = [
         Movie(name: "Minions",

@@ -8,7 +8,15 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
-
-   
-}
+//var movie = Movie
+//
+//class TableViewCell: UITableViewCell {
+//    
+//    func configurecell(){
+//        cell.textLabel?.text = movie.name
+//        cell.detail.text = String(movie.year)
+//        
+//    }
+//    
+//   
+//}

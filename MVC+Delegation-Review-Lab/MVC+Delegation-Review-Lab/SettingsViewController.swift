@@ -16,16 +16,37 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var sizeNumberLabel: UILabel!
     
-
+    var fontSize = CGFloat()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
       
+
     }
+    
+    
     
     @IBAction func sliderAction(_ sender: UISlider) {
+        
+        
+        stepperControl.value = Double(Float(sender.value))
+        sizeNumberLabel.text = Int(sender.value).description
+        fontSize = CGFloat(sender.value)
+        
+    }
+
+
+    @IBAction func stepperAction(_ sender: UIStepper) {
+        
+        sliderSize.value = Float(sender.value)
+        sizeNumberLabel.text = Int(sender.value).description
+        fontSize = CGFloat(sender.value)
+        
     }
     
-  
 
+    
+    
 }
